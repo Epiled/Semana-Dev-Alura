@@ -1,0 +1,6 @@
+.titulo {
+    margin-bottom: var(--espaco-interno);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font: var(--font-titulo-sideBar);
+}

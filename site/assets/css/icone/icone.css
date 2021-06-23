@@ -1,0 +1,26 @@
+.icone {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: calc(var(--borda-arredondada) * 2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone--ultimo {
+    margin-left: 0.8rem;
+}
+
+.icone:hover {
+    background: rgba(80, 129, 251, 0.08);
+}
+
+.icone:active {
+    background: rgba(80, 129, 251, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+    .icone--lupa {
+        display: none;
+    }
+}

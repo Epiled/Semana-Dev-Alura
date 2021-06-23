@@ -1,0 +1,15 @@
+.logo {
+    min-width: 145px;
+    background-image: url(../imgs/logo.png);
+    height: 5.2rem;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        width: 100%;
+        max-width: 25.4rem;
+    }
+}

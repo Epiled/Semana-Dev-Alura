@@ -1,0 +1,28 @@
+.perfil {
+    align-items: center;
+    margin-top: 2.4rem;
+    color: rgb(255, 255, 255);
+    font: var(--fonte-corpo);
+}
+
+.perfil--mobile {
+    display: flex;
+}
+
+.perfil--desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .perfil--mobile {
+        display: none;
+    }
+    .perfil--desktop {
+        display: flex;
+        margin: 0;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 27.2rem;
+        margin-left: calc(var(--espaco-interno) * 2);
+    }
+}

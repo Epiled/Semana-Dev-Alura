@@ -1,0 +1,6 @@
+.card__conteiner {
+    padding: calc(var(--espaco-interno) * 2);
+    background-color: var(--cor-personalizada);
+    border-radius: var(--borda-arredondada);
+    position: relative;
+}

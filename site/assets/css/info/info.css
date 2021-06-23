@@ -1,0 +1,9 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--espaco-interno) * 3);
+}
+
+.info:last-of-type {
+    margin-bottom: 0;
+}

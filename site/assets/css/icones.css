@@ -1,0 +1,9 @@
+.icones {
+    display: flex;
+}
+
+@media screen and (min-width: 1440px) {
+    .icones {
+        display: none;
+    }
+}

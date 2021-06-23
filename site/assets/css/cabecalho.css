@@ -1,0 +1,3 @@
+.cabecalho {
+    margin-bottom: calc(var(--espaco-interno) * 2);
+}
