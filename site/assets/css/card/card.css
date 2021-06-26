@@ -1,0 +1,20 @@
+.card--comunidade {
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: var(--borda-arredondada);
+}
+
+.card__info {
+    padding: var(--espaco-interno-card);
+}
+
+.card__opcoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__descricao {
+    font: var(--fonte-corpo);
+    color: white;
+    margin-top: var(--espaco-interno);
+    margin-bottom: calc(var(--espaco-interno) * 2);
+}

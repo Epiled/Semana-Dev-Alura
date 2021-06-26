@@ -3,14 +3,15 @@
     margin-top: 2.4rem;
     color: rgb(255, 255, 255);
     font: var(--fonte-corpo);
-}
-
-.perfil--mobile {
     display: flex;
 }
 
 .perfil--desktop {
     display: none;
+}
+
+.perfil--comunidade {
+    margin: 0;
 }
 
 @media screen and (min-width: 1440px) {

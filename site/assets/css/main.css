@@ -3,6 +3,7 @@
     background: rgb(5, 29, 59);
     --borda-arredondada: .8rem;
     --espaco-interno: 1.6rem;
+    --espaco-interno-card: 2.4rem;
     --cor-personalizada: rgb(107, 209, 255);
     --fonte-corpo: normal normal 1.6rem/2.4rem 'Inter', 'sans-serif';
     --fonte-code: normal normal 1.4rem/1.8rem 'Roboto', sans-serif;

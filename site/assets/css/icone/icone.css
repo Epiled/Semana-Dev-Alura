@@ -11,6 +11,12 @@
     margin-left: 0.8rem;
 }
 
+.icone__texto {
+    color: white;
+    font: var(--fonte-corpo);
+    margin-left: .8rem;
+}
+
 .icone:hover {
     background: rgba(80, 129, 251, 0.08);
 }
