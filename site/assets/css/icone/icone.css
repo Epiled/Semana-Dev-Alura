@@ -5,16 +5,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-.icone--ultimo {
     margin-left: 0.8rem;
 }
 
-.icone__texto {
-    color: white;
-    font: var(--fonte-corpo);
-    margin-left: .8rem;
+.icone--comunidade {
+    height: 4rem;
+    width: 5.8rem;
+}
+
+.icone--comunidade:first-of-type {
+    margin: 0;
 }
 
 .icone:hover {

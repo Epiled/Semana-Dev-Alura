@@ -1,1 +1,5 @@
-.icone__conteiner {}
+.icone__conteiner {
+    background: none;
+    border: 0;
+    outline: 0;
+}

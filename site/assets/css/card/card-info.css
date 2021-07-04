@@ -1,0 +1,3 @@
+.card__info {
+    padding: var(--espaco-interno-card);
+}

@@ -1,20 +1,23 @@
+.card {
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-gap: var(--espaco-interno-card);
+    grid-template-columns: auto;
+}
+
 .card--comunidade {
     background: rgba(0, 0, 0, 0.16);
     border-radius: var(--borda-arredondada);
 }
 
-.card__info {
-    padding: var(--espaco-interno-card);
-}
-
-.card__opcoes {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card__descricao {
-    font: var(--fonte-corpo);
-    color: white;
-    margin-top: var(--espaco-interno);
-    margin-bottom: calc(var(--espaco-interno) * 2);
+@media screen and (min-width:1440px) {
+    .cards {
+        grid-template-columns: auto auto;
+    }
+    .card--comunidade {
+        margin-top: 0;
+    }
 }

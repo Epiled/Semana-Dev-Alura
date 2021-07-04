@@ -8,10 +8,15 @@
     margin-right: 1rem;
 }
 
-.menuLateral__link:hover .menuLateral__iconeFundo {
+.menuLateral__link:hover .menuLateral__iconeFundo,
+.menuLateral__link:hover .icone__cor {
+    fill: rgba(255, 255, 255, .8);
     background: rgba(80, 129, 251, 0.64);
 }
 
-.menuLateral__link--ativo .menuLateral__iconeFundo {
+.menuLateral__link--ativo .menuLateral__iconeFundo,
+.menuLateral__link:active .menuLateral__iconeFundo,
+.menuLateral__link:active .icone__cor {
+    fill: rgb(255, 255, 255);
     background: rgb(80, 129, 251);
 }

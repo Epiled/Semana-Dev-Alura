@@ -8,10 +8,10 @@
 }
 
 .botao__filled:focus {
-    background: rgb(123, 164, 252);
-    border: .4rem solid rgba(80, 129, 251, 0.72);
+    background: rgb(150, 185, 253);
 }
 
 .botao__filled:active {
-    background: rgb(150, 185, 253);
+    background: rgb(123, 164, 252);
+    border: .4rem solid rgba(80, 129, 251, 0.72);
 }

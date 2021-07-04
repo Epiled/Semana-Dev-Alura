@@ -19,11 +19,18 @@
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
     <link rel="stylesheet" href="./assets/css/conteudo.css">
     <link rel="stylesheet" href="./assets/css/corpo.css">
-    <link rel="stylesheet" href="./assets/css/entrada.css">
     <link rel="stylesheet" href="./assets/css/formulario.css">
     <link rel="stylesheet" href="./assets/css/logo.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/mobileMenu.css">
+
+    <link rel="stylesheet" href="./assets/css/entrada/entrada.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-conteiner.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-flecha.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-gatilho.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-opcao.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-opcoes.css">
+    <link rel="stylesheet" href="./assets/css/entrada/entrada-pesquisa.css">
 
     <link rel="stylesheet" href="./assets/css/menuLateral/menuLateral.css">
     <link rel="stylesheet" href="./assets/css/menuLateral/menuLateral-item.css">
@@ -34,10 +41,16 @@
     <link rel="stylesheet" href="./assets/css/icone/icone-conteiner.css">
     <link rel="stylesheet" href="./assets/css/icone/icone-simbolo.css">
     <link rel="stylesheet" href="./assets/css/icone/icone-cor.css">
+    <link rel="stylesheet" href="./assets/css/icone/icone-coracao.css">
+    <link rel="stylesheet" href="./assets/css/icone/icone-texto.css">
 
     <link rel="stylesheet" href="./assets/css/card/card.css">
     <link rel="stylesheet" href="./assets/css/card/card-conteiner.css">
     <link rel="stylesheet" href="./assets/css/card/card-codigo.css">
+    <link rel="stylesheet" href="./assets/css/card/card-descricao.css">
+    <link rel="stylesheet" href="./assets/css/card/card-formatador.css">
+    <link rel="stylesheet" href="./assets/css/card/card-info.css">
+    <link rel="stylesheet" href="./assets/css/card/card-opcoes.css">
 
     <link rel="stylesheet" href="./assets/css/botao/botao.css">
     <link rel="stylesheet" href="./assets/css/botao/botao-filled.css">
@@ -46,6 +59,7 @@
     <link rel="stylesheet" href="./assets/css/vetor/vetor.css">
 
     <link rel="stylesheet" href="./assets/css/perfil/perfil.css">
+    <link rel="stylesheet" href="./assets/css/perfil/perfil-conteiner.css">
     <link rel="stylesheet" href="./assets/css/perfil/perfil-imagem.css">
     <link rel="stylesheet" href="./assets/css/titulo.css">
 </head>
@@ -53,9 +67,9 @@
 <body class="corpo">
     <header class="cabecalho">
         <nav class="menu">
-            <a class="logo"></a>
+            <a class="logo" href="index.html" data-logo></a>
 
-            <input class="entrada entrada--pesquisa" type="text">
+            <input class="entrada entrada__pesquisa" data-pesquisa type="text" placeholder="Busque por algo">
 
             <div class="icones">
                 <span class="icone icone__conteiner icone--lupa" data-lupa>
@@ -73,8 +87,10 @@
             </div>
 
             <div class="perfil perfil--desktop">
-                <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
-                <span class="perfil__nome">Felipe</span>
+                <div class="perfil__conteiner">
+                    <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="perfil">
+                    <span class="perfil__nome">Felipe</span>
+                </div>
             </div>
         </nav>
     </header>
@@ -82,16 +98,16 @@
         <nav class="mobileMenu" data-mobileMenu>
             <div class="menuLateral menuLateral--show">
                 <ul>
-                    <a href="#" class="menuLateral__link menuLateral__link--ativo">
+                    <a href="index.html" class="menuLateral__link">
                         <li class="menuLateral__item">
                             <span class="icone icone__conteiner menuLateral__iconeFundo">
                             <svg class="icone__simbolo" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="icone__cor" d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z"/>
+                                <path class="icone__cor icone__cor--inativo" d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z"/>
                             </svg>
                         </span> Editor De Código
                         </li>
                     </a>
-                    <a href="#" class="menuLateral__link">
+                    <a href="#" class="menuLateral__link menuLateral__link--ativo">
                         <li class="menuLateral__item">
                             <span class="icone icone__conteiner menuLateral__iconeFundo">
                         <svg class="icone__simbolo" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,16 +123,69 @@
             </div>
         </nav>
 
-        <div class="card card--comunidade">
-            <div class="card__conteiner">
+        <div class="cards">
+            <div class="card card--comunidade">
+                <a href="#">
+                    <div class="card__conteiner">
+                        <svg class="vetor">
+                                <circle class="vetor__mac--fechar" cx=".6rem" cy= ".6rem" r=".6rem"></circle>
+                                <circle class="vetor__mac--minimizar" cx="2.4rem" cy= ".6rem" r=".6rem"></circle>
+                                <circle class="vetor__mac--salvar" cx="4.2rem" cy= ".6rem" r=".6rem"></circle>
+                        </svg>
+                        <code class="card__codigo card__codigo--comunidade" contenteditable="true">
+                            <pre class="card__formatador">
+                                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
-                <svg class="vetor">
+                                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+                                const unfold = (f, seed) => {
+                                const go = (f, seed, acc) => {
+                                const res = f(seed)
+                                return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                                }
+                                return go(f, seed, [])
+                                }
+                            </pre>
+                        </code>
+                    </div>
+                </a>
+                <div class="card__info">
+                    <h2 class="titulo">Título do projeto</h2>
+                    <p class="card__descricao">Essa é a descrição do meu projeto.</p>
+                    <div class="card__opcoes">
+                        <div class="icones">
+                            <span class="icone icone__conteiner icone--comunidade">
+                                <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="icone__cor" d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z"/>
+                                </svg>                                    
+                                <span class="icone__texto">0</span>
+                            </span>
+
+                            <span class="icone icone__conteiner icone--comunidade">
+                                <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="icone__cor icone__coracao" d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"/>
+                                </svg>    
+                                <span class="icone__texto">0</span>
+                            </span>
+                        </div>
+                        <div class="perfil perfil--comunidade">
+                            <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
+                            <span class="perfil__nome">Felipe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card--comunidade">
+                <div class="card__conteiner">
+
+                    <svg class="vetor">
                 <circle class="vetor__mac--fechar" cx=".6rem" cy= ".6rem" r=".6rem"></circle>
                 <circle class="vetor__mac--minimizar" cx="2.4rem" cy= ".6rem" r=".6rem"></circle>
                 <circle class="vetor__mac--salvar" cx="4.2rem" cy= ".6rem" r=".6rem"></circle>
             </svg>
 
-                <code class="card__codigo" contenteditable="true">
+                    <code class="card__codigo card__codigo--comunidade" contenteditable="true">
                    
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
@@ -131,35 +200,146 @@ return go(f, seed, [])
 }
                 
             </code>
-            </div>
-            <div class="card__info">
-                <h2 class="titulo">Título do projeto</h2>
-                <p class="card__descricao">Essa é a descrição do meu projeto.</p>
-                <div class="card__opcoes">
-                    <div class="icones">
-                        <span class="icone icone__conteiner icone--lupa" data-lupa>
+                </div>
+
+                <div class="card__info">
+                    <h2 class="titulo">Título do projeto</h2>
+                    <p class="card__descricao">Essa é a descrição do meu projeto.</p>
+                    <div class="card__opcoes">
+                        <div class="icones">
+                            <span class="icone icone__conteiner">
                                 <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
                                     <path class="icone__cor" d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z"/>
                                 </svg>                                    
                             <span class="icone__texto">0</span>
-                        </span>
+                            </span>
 
-                        <span class="icone icone__conteiner icone--ultimo" data-hamburguer>
+                            <span class="icone icone__conteiner icone--ultimo">
                             <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
                                 <path class="icone__cor" d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"/>
                                 </svg>    
                             <span class="icone__texto">0</span>
-                        </span>
-                    </div>
-                    <div class="perfil perfil--comunidade">
-                        <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
-                        <span class="perfil__nome">Felipe</span>
+                            </span>
+                        </div>
+                        <div class="perfil perfil--comunidade">
+                            <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
+                            <span class="perfil__nome">Felipe</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="card card--comunidade">
+                <div class="card__conteiner">
+
+                    <svg class="vetor">
+                <circle class="vetor__mac--fechar" cx=".6rem" cy= ".6rem" r=".6rem"></circle>
+                <circle class="vetor__mac--minimizar" cx="2.4rem" cy= ".6rem" r=".6rem"></circle>
+                <circle class="vetor__mac--salvar" cx="4.2rem" cy= ".6rem" r=".6rem"></circle>
+            </svg>
+
+                    <code class="card__codigo card__codigo--comunidade" contenteditable="true">
+                   
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+const res = f(seed)
+return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}
+                
+            </code>
+                </div>
+
+                <div class="card__info">
+                    <h2 class="titulo">Título do projeto</h2>
+                    <p class="card__descricao">Essa é a descrição do meu projeto.</p>
+                    <div class="card__opcoes">
+                        <div class="icones">
+                            <span class="icone icone__conteiner">
+                                <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="icone__cor" d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z"/>
+                                </svg>                                    
+                            <span class="icone__texto">0</span>
+                            </span>
+
+                            <span class="icone icone__conteiner icone--ultimo">
+                            <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                <path class="icone__cor" d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"/>
+                                </svg>    
+                            <span class="icone__texto">0</span>
+                            </span>
+                        </div>
+                        <div class="perfil perfil--comunidade">
+                            <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
+                            <span class="perfil__nome">Felipe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card--comunidade">
+                <div class="card__conteiner">
+
+                    <svg class="vetor">
+                <circle class="vetor__mac--fechar" cx=".6rem" cy= ".6rem" r=".6rem"></circle>
+                <circle class="vetor__mac--minimizar" cx="2.4rem" cy= ".6rem" r=".6rem"></circle>
+                <circle class="vetor__mac--salvar" cx="4.2rem" cy= ".6rem" r=".6rem"></circle>
+            </svg>
+
+                    <code class="card__codigo card__codigo--comunidade" contenteditable="true">
+                   
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+const res = f(seed)
+return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}
+                
+            </code>
+                </div>
+
+                <div class="card__info">
+                    <h2 class="titulo">Título do projeto</h2>
+                    <p class="card__descricao">Essa é a descrição do meu projeto.</p>
+                    <div class="card__opcoes">
+                        <div class="icones">
+                            <span class="icone icone__conteiner">
+                                <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="icone__cor" d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z"/>
+                                </svg>                                    
+                            <span class="icone__texto">0</span>
+                            </span>
+
+                            <span class="icone icone__conteiner icone--ultimo">
+                            <svg class="icone__simbolo" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                <path class="icone__cor" d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"/>
+                                </svg>    
+                            <span class="icone__texto">0</span>
+                            </span>
+                        </div>
+                        <div class="perfil perfil--comunidade">
+                            <img class="perfil__imagem" src="./assets/imgs/Felindo.jpg" alt="">
+                            <span class="perfil__nome">Felipe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/selecao-custom.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,12 @@
     color: rgb(255, 255, 255);
     font: var(--fonte-corpo);
     display: flex;
+    border-radius: var(--borda-arredondada);
+    padding: var(--espaco-interno-perfil);
+}
+
+.perfil--mobile:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .perfil--desktop {
@@ -12,6 +18,10 @@
 
 .perfil--comunidade {
     margin: 0;
+}
+
+.perfil--comunidade:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 @media screen and (min-width: 1440px) {
@@ -25,5 +35,7 @@
         width: 100%;
         max-width: 27.2rem;
         margin-left: calc(var(--espaco-interno) * 2);
+        box-sizing: border-box;
+        padding: 0;
     }
 }
