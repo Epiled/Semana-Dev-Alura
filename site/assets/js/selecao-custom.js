@@ -1,3 +1,4 @@
+/* Seletor Custom */
 document.querySelector('[data-entradaSelecao]').addEventListener('click', function() {
     this.classList.toggle('entrada--ativa');
     this.querySelector('[data-entradaConteiner]').classList.toggle('entrada__conteiner--aberta');
