@@ -6,4 +6,7 @@
     .icones {
         display: none;
     }
+    .icones--comunidade {
+        display: flex;
+    }
 }

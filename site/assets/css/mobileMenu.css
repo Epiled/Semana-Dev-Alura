@@ -2,8 +2,7 @@
     top: calc(var(--altura-menu) + var(--espaco-interno) * 4);
     right: -30rem;
     height: calc(100vh - (var(--altura-menu) + var(--espaco-interno) * 4));
-    width: 100%;
-    max-width: 25.4rem;
+    min-width: 25.4rem;
     z-index: 1;
     background: #2D415B;
     border-radius: var(--borda-arredondada);

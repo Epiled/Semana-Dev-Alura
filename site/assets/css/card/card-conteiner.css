@@ -4,3 +4,7 @@
     border-radius: var(--borda-arredondada);
     position: relative;
 }
+
+.card__conteiner--comunidade {
+    padding: calc(var(--espaco-interno-perfil) * 2);
+}

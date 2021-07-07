@@ -12,3 +12,7 @@
     --font-titulo: normal bold 2.1rem/3.2rem 'Inter', 'sans-serif';
     --altura-menu: 5.6rem;
 }
+
+a {
+    text-decoration: none;
+}

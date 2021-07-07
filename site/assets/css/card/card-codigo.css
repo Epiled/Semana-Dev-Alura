@@ -3,7 +3,7 @@
     color: rgb(255, 255, 255);
     background-color: rgb(20, 20, 20);
     border-radius: var(--borda-arredondada);
-    min-height: 30.2rem;
+    height: 30.2rem;
     width: 100%;
     outline: 0;
     padding-top: calc(var(--espaco-interno) * 3);
@@ -15,5 +15,7 @@
 }
 
 .card__codigo--comunidade {
-    min-height: 24rem;
+    max-height: 24rem;
+    height: 100%;
+    width: auto;
 }
